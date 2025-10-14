@@ -26,7 +26,8 @@
     "forr": {
         "prefix": "forr",
         "body": [
-            "for (${1:size_t} ${2:i} = ${3:length} - 1; $2 >= ${4:0}; $2--) {",
+            "for (${1:size_t} ${2:i} = ${3:length} - 1; $2 >= ${4:0}; $2--)",
+            "{",
             "\t$0",
             "}"
         ],
@@ -39,13 +40,13 @@
     },
     "while": {
         "prefix": "while",
-        "body": ["while ($1) {", "\t$0", "}"],
+        "body": ["while ($1)", "{", "\t$0", "}"],
         "description": "'while' loop snippet"
     },
     "foreach": {
         "prefix": "foreach",
         "body": [
-            "for(${1:auto} ${2:var} : ${3:collection_to_loop}) {",
+            "for(${1:auto} ${2:var} : ${3:collection_to_loop})", "{",
             "\t$0",
             "}"
         ],

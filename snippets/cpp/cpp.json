@@ -4,7 +4,8 @@
     "body": [
         "#include <iostream>",
         "",
-        "int main (int argc, char *argv[]) {",
+        "int main (int argc, char *argv[])",
+        "{",
             "\t$1",
             "",
             "\treturn 0;",
@@ -15,7 +16,8 @@
     "for": {
         "prefix": "for",
         "body": [
-            "for (${1:size_t} ${2:i} = ${3:0}; $2 < ${4:length}; $2++) {",
+            "for (${1:size_t} ${2:i} = ${3:0}; $2 < ${4:length}; $2++)",
+            "{",
             "\t$0",
             "}"
         ],
@@ -168,6 +170,18 @@
         "prefix": "#if",
         "body": ["#if ${1:0}", "$0", "#endif // $1"],
         "description": "Code snippet for #if"
+    },
+    "include once": {
+        "prefix": "#once",
+        "body": [
+            "#ifndef ${1:FILE}_HPP",
+            "#define $1_HPP",
+            "",
+            "$0",
+            "",
+            "#endif /* end of include guard: $1_HPP */"
+        ],
+        "description": "Header include guard"
     },
     "struct": {
         "prefix": "struct",

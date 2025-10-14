@@ -1,3 +1,10 @@
+> [!WARNING]
+> This is a personal fork of [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+>  The main goal of this fork is to experiment with custom snippets and configurations. It may diverge from the original project and is not officially affiliated with it
+> 
+> For the stable, community-maintained version, please refer to the [original repository](https://github.com/rafamadriz/friendly-snippets).
+
+
 # Friendly Snippets
 
 Snippets collection for a set of different programming languages.

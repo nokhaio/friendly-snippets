@@ -54,22 +54,22 @@
     },
     "if": {
         "prefix": "if",
-        "body": ["if ($1) {", "\t$0", "}"],
+        "body": ["if ($1)", "{", "\t$0", "}"],
         "description": "Code snippet for if statement"
     },
     "else": {
         "prefix": "else",
-        "body": ["else {", "\t$0", "}"],
+        "body": ["else", "{", "\t$0", "}"],
         "description": "Code snippet for else statement"
     },
     "else if": {
         "prefix": "else if",
-        "body": ["else if ($1) {", "\t$0", "}"],
+        "body": ["else if ($1)", "{", "\t$0", "}"],
         "description": "Code snippet for else-if statement"
     },
     "enum": {
         "prefix": "enum",
-        "body": ["enum ${1:MyEnum} {", "\t$0", "};"],
+        "body": ["enum ${1:MyEnum}", "{", "\t$0", "};"],
         "description": "Code snippet for enum"
     },
     "enum class": {
@@ -80,8 +80,8 @@
     "class": {
         "prefix": "class",
         "body": [
-            "class ${1:MyClass} {",
-            "public:",
+            "class ${1:MyClass}", "{",
+            "  public:",
             "\t$1();",
             "\t$1($1 &&) = default;",
             "\t$1(const $1 &) = default;",
@@ -89,7 +89,7 @@
             "\t$1 &operator=(const $1 &) = default;",
             "\t~$1();",
             "",
-            "private:",
+            "  private:",
             "\t$2",
             "};",
             "",
@@ -104,10 +104,10 @@
     "eclass": {
         "prefix": "eclass",
         "body": [
-            "class ${1:MyClass} {",
-            "public:",
+            "class ${1:MyClass}", "{",
+            "  public:",
             "\t$2",
-            "private:",
+            "  private:",
             "\t$3",
             "};",
             ""
@@ -203,7 +203,7 @@
     "try": {
         "prefix": "try",
         "body": [
-            "try {",
+            "try", "{",
             "\t$2",
             "}",
             "catch (${1:const std::exception&}) {",
@@ -213,7 +213,7 @@
     },
     "union": {
         "prefix": "union",
-        "body": ["union ${1:MyUnion} {", "\t$0", "};"],
+        "body": ["union ${1:MyUnion}", "{", "\t$0", "};"],
         "description": "Code snippet for union"
     },
     "cout": {
@@ -221,6 +221,12 @@
         "body": ["std::cout << ${1:message};"],
         "description": "Code snippet for printing to std::cout, provided the header is set"
     },
+    "coutn": {
+        "prefix": "coutn",
+        "body": ["std::cout << ${1:message} << std::endl;"],
+        "description": "Code snippet for printing to std::cout with new line, provided the header is set"
+    },
+
     "cin": {
         "prefix": "cin",
         "body": ["std::cin >> $1;"],

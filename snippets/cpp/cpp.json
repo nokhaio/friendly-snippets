@@ -127,7 +127,7 @@
             "\t\t$1(const $1& other);",
             "\t\t~$1();",
             "",
-            "\t\t$1&\toperator=(const $1& other);"
+            "\t\t$1&\toperator=(const $1& other);",
             "\t\t",
             "\t\t$4",
             "};",
@@ -207,13 +207,13 @@
     },
     "struct": {
         "prefix": "struct",
-        "body": ["struct ${1:MyStruct} {", "\t$0", "};"],
+        "body": ["struct ${1:MyStruct}", "{", "\t$0", "};"],
         "description": "Code snippet for struct"
     },
     "switch": {
         "prefix": "switch",
         "body": [
-            "switch (${1:switch_on}) {",
+            "switch (${1:switch_on})", "{",
             "\tdefault:",
             "\t\t$0",
             "\t\tbreak;",
@@ -247,7 +247,6 @@
         "body": ["std::cout << ${1:message} << std::endl;"],
         "description": "Code snippet for printing to std::cout with new line, provided the header is set"
     },
-
     "cin": {
         "prefix": "cin",
         "body": ["std::cin >> $1;"],

@@ -120,7 +120,6 @@
             "class ${1:MyClass}", "{",
             "  public:",
             "\t\t$1();",
-            // "\t\t$1(${2:Arg func});",
             "\t\t$1(const $1& other);",
             "\t\t~$1();",
             "",
@@ -197,12 +196,12 @@
     "include once": {
         "prefix": "#once",
         "body": [
-            "#ifndef ${1:FILE}_HPP",
-            "#define $1_HPP",
+            "#ifndef __${1:FILE}__HPP",
+            "#define __$1__HPP",
             "",
             "$0",
             "",
-            "#endif /* end of include guard: $1_HPP */"
+            "#endif /* end of include guard: __$1__HPP */"
         ],
         "description": "Header include guard"
     },

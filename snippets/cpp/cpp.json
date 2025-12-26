@@ -301,7 +301,17 @@
     "Main function template": {
         "prefix": "main",
         "body": [
-            "int main (int argc, char *argv[]) {",
+            "int main (int argc, char *argv[])", "{",
+            "\t$1",
+            "\treturn 0;",
+            "}"
+        ],
+        "description": "A standard main function for a C++ program"
+    },
+    "Main function template": {
+        "prefix": "mainn",
+        "body": [
+            "int main (void)", "{",
             "\t$1",
             "\treturn 0;",
             "}"

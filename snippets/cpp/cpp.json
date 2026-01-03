@@ -114,6 +114,18 @@
         ],
         "description": "Code snippet for empty class"
     },
+    "exclass": {
+        "prefix": "exclass",
+        "body": [
+            "class ${1:MyClass} : public ${2:inheritanceClas}", "{",
+            "  public:",
+            "\tvirtual const char* what() const throw();",
+            "};",
+            ""
+        ],
+        "description": "Code snippet for Extension class"
+    },
+
     "oclass": {
         "prefix": "oclass",
         "body": [
@@ -169,6 +181,21 @@
         ],
         "description": "Code snippet for class with inline constructor/destructor"
     },
+    "operatoreq": {
+        "prefix": "opt=",
+        "body": [
+            "${1:ReturnName}& $1::operator::=(const $1& other)",
+            "{",
+            "\tif (this != &other)",
+            "\t\t{",
+            "\t\t\t$2",
+            "\t\t}",
+            "\treturn *this;",
+            "};"
+        ],
+        "description": "Code snippet for asignment operator"
+    },
+
     "interface": {
         "prefix": "interface",
         "body": ["__interface I${1:Interface} {", "\t$0", "};"],
@@ -301,7 +328,7 @@
     "Main function template": {
         "prefix": "main",
         "body": [
-            "int main (int argc, char *argv[])", "{",
+            "int main (int argc, char *argv[])" "{",
             "\t$1",
             "\treturn 0;",
             "}"

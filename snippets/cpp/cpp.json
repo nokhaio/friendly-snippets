@@ -194,7 +194,6 @@
         ],
         "description": "Code snippet for asignment operator"
     },
-
     "interface": {
         "prefix": "interface",
         "body": ["__interface I${1:Interface} {", "\t$0", "};"],

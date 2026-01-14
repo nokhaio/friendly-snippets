@@ -6,9 +6,9 @@
         "",
         "int main (int argc, char *argv[])",
         "{",
-            "\t$1",
-            "",
-            "\treturn 0;",
+        "\t$1",
+        "",
+        "\treturn 0;",
         "}"
         ],
         "description": "Standard starter template for a tiny C++ program"
@@ -183,7 +183,7 @@
     "operatoreq": {
         "prefix": "opt=",
         "body": [
-            "${1:ReturnName}& $1::operator::=(const $1& other)",
+            "${1:ReturnName}& $1::operator=(const $1& other)",
             "{",
             "\tif (this != &other)",
             "\t\t{",
@@ -192,7 +192,7 @@
             "\treturn *this;",
             "};"
         ],
-        "description": "Code snippet for asignment operator"
+        "description": "Code snippet for asignment operator="
     },
     "interface": {
         "prefix": "interface",
@@ -333,7 +333,7 @@
         ],
         "description": "A standard main function for a C++ program"
     },
-    "Main function template": {
+    "Main without args": {
         "prefix": "mainn",
         "body": [
             "int main (void)", "{",
@@ -341,7 +341,7 @@
             "\treturn 0;",
             "}"
         ],
-        "description": "A standard main function for a C++ program"
+        "description": "A standard main function without arguments for a C++ program"
     },
     "#guard": {
       "prefix": "#guard",
